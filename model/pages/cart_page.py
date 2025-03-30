@@ -18,13 +18,12 @@ class CartPage:
 
     def adding_book_to_favorites_from_cart(self):
         with allure.step('Добавление книги в избранное из корзины'):
-           browser.element('.FunctionalButton_funcButtonContent__ns82k').should(be.visible).click()
+           browser.all('.FunctionalButton_funcButtonContent__ns82k').element_by(be.visible).click()
            return self
 
     def removing_book_from_favorites_from_cart(self):
         with allure.step('Удаление книги из избранного из корзины'):
-           browser.open("my-books/cart/")
-           browser.element('.FunctionalButton_funcButtonContent__ns82k').should(be.visible).click()
+           browser.all('.FunctionalButton_funcButtonContent__ns82k').element_by(be.visible).click()
            return self
 
     def remove_book_from_cart(self):

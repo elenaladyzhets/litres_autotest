@@ -24,21 +24,24 @@ def test_add_book_to_wishlist_from_book_page():
     wishlist_page.open_wishlist()
     wishlist_page.book_must_be_added_to_favorites(book)
 
-#@allure.epic('Добавление в отложенное')
-#@allure.label('owner', 'Elena Ladyzhets')
-#@allure.feature('Добавление в отложенное через корзину')
-#@allure.tag('web')
-#@allure.severity('normal')
+@allure.epic('Добавление в отложенное')
+@allure.label('owner', 'Elena Ladyzhets')
+@allure.feature('Добавление в отложенное через корзину')
+@allure.tag('web')
+@allure.severity('normal')
 
-#def test_add_book_to_wishlist_from_cart():
- #   book = Book(
-  #      name='Кладбище домашних животных',
-   #     author='Стивен Кинг',
-    #    url='stiven-king/kladbische-domashnih-zhivotnyh-42225823/',
-     #   price='499 ₽'
-    #)
+def test_add_book_to_wishlist_from_cart():
+    book = Book(
+        name='Кладбище домашних животных',
+        author='Стивен Кинг',
+        url='stiven-king/kladbische-domashnih-zhivotnyh-42225823/',
+        price='499 ₽'
+    )
 
-   # book_page.open(book)
-   # book_page.adding_book_to_favorites()
-   # wishlist_page.open_wishlist()
-   # wishlist_page.book_must_be_added_to_favorites(book)
+    book_page.open(book)
+    book_page.adding_book_to_cart()
+    book_page.close_message_window()
+    cart_page.open_cart()
+    cart_page.adding_book_to_favorites_from_cart()
+    wishlist_page.open_wishlist()
+    wishlist_page.book_must_be_added_to_favorites(book)

@@ -5,7 +5,7 @@ import allure
 class BookPage:
     def open(self, book):
         with allure.step('Открытие страницы книги'):
-           browser.open(f"book/{book.url}")
+           browser.open(f"https://www.litres.ru/{book.url}")
            return self
 
     def adding_book_to_cart(self):
@@ -20,7 +20,7 @@ class BookPage:
 
     def adding_book_to_favorites(self):
         with allure.step('Добавление книги в избранное из страницы книги'):
-            browser.element('[data-testid="wishlist__button"]').should(be.visible).click()
+            browser.all('[data-testid="wishlist__button"]').element_by(be.visible).click()
             return self
 
     def close_message_window(self):
