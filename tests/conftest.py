@@ -42,6 +42,12 @@ def setting_browser(request):
         command_executor=f'https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub',
         options=options)
 
+    # Настройки тайм-аутов
+    driver.set_page_load_timeout(60)  # Тайм-аут для загрузки страницы
+    driver.set_script_timeout(60)  # Тайм-аут для выполнения скриптов
+    driver.implicitly_wait(10)  # Тайм-аут для поиска элементов
+
+
     browser.config.driver = driver
 
     yield
