@@ -9,7 +9,7 @@ from model.pages.book_page import book_page
 @allure.feature('Проверка добавления книги в корзину')
 @allure.tag('web')
 @allure.severity('normal')
-def test_add_book_to_basket():
+def test_add_book_to_cart():
     book = Book(
         name='Кладбище домашних животных',
         author='Стивен Кинг',
