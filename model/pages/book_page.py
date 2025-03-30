@@ -2,7 +2,7 @@ from selene import browser, be, have, command
 import allure
 
 
-class BookPage():
+class BookPage:
     def open(self, book):
         with allure.step('Открытие страницы книги'):
            browser.open(f"book/{book.url}")
@@ -20,7 +20,7 @@ class BookPage():
 
     def adding_book_to_favorites(self):
         with allure.step('Добавление книги в избранное из страницы книги'):
-            browser.element('button .FunctionalButton_funcButtonContent__ns82k [data-testid="wishlist__button"]').should(be.visible).click()
+            browser.element('[data-testid="wishlist__button"]').should(be.visible).click()
             return self
 
     def close_message_window(self):
