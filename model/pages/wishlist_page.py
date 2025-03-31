@@ -9,13 +9,13 @@ class WishlistPage:
 
    def removing_book_from_favorites(self):
        with allure.step('Удаление книги из избранного из Отложенные'):
-           browser.element('[data-testid="overlay__trigger"]').should(be.visible).click()
-           browser.element('[data-testid="contextMenu__favorites--button"]').should(be.visible).click()
+           browser.element('[data-testid="overlay__trigger"]').should(be.present).should(be.visible).click()
+           browser.element('[data-testid="contextMenu__favorites--button"]').should(be.present).should(be.visible).click()
            return self
 
    def book_must_be_added_to_favorites(self, book):
        with allure.step('Проверка книги в избранном'):
-           browser.open("my-books/liked/")
+           browser.element('[data-testid="art__title"]').should(be.visible)
            browser.element('[data-testid="art__title"]').should(have.text(book.name))
            browser.element('[data-testid="art__authorName"]').should(have.text(book.author))
            return self
