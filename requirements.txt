@@ -1,6 +1,11 @@
 pytest~=8.3.5
-selene>=2.0.0rc9
-allure-pytest>=2.13.3
-python-dotenv>=1.0.0
-allure-python-commons~=2.13.5
-selenium~=4.29.0
+selene>=2.0.0rc2
+allure-pytest==2.14.1
+requests~=2.32.3
+Appium-Python-Client~=4.0.0
+pydantic~=2.11.3
+pydantic-settings~=2.8.1
+selenium~=4.31.0
+allure-python-commons~=2.14.0
+python-dotenv~=1.0.1
+jsonschema==4.23.0
