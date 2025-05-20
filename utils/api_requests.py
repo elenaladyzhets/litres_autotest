@@ -2,9 +2,9 @@ import requests
 import allure
 import logging
 from allure_commons.types import AttachmentType
-from tests.api.conftest import base_url
 from utils.logging_helper import logging_helper
 
+base_url = "https://api.litres.ru/foundation/api"
 
 def api_get(url, **kwargs):
     with allure.step("API Request"):
