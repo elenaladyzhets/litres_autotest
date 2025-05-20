@@ -84,8 +84,8 @@ allure serve build/allure-results
 > [!NOTE]
 > Параметры сборки не обязательны
 ```python
-BROWSER_VERSION = ['128.0', '127.0'] # Версия браузера
-ENVIRONMENT = ['STAGE', 'PREPROD', 'PROD'] # Окружение
+TYPE_TEST = ['all', 'api', 'mobile', 'ui'] # Тип автотестов
+BROWSER = ['128.0' '127.0'] # Версия браузера
 COMMENT = ['litres autotest']
 ```
 #### Запуск автотестов в Jenkins
@@ -94,14 +94,15 @@ COMMENT = ['litres autotest']
 ![jenkins project main page](attachments/pictures/jenkins_project_main_page.png)
 
 2. Нажать "Build with Parameters"
-3. Из списка "ENVIRONMENT" выбрать любое окружение
+3. Из списка "TYPE_TEST" выбрать тип, который необходимо протестировать
+4. Из списка "BROWSER" выбрать версию браузера
 4. Нажать "Build"
 
 ![jenkins_build](attachments/pictures/jenkins_build.png)
 
 ----
 
-### Allure отчет
+### <img width="3%" title="Allure" src="attachments/icons/Allure_Report.png"> Allure отчет
 #### <a target="_blank" href="https://jenkins.autotests.cloud/job/Ivi-mobile-and-UI-Auto-Tests/15/allure/">Общие результаты</a>
 ![allure_report_overview](attachments/pictures/allure_report_overview.png)
 
@@ -117,7 +118,7 @@ COMMENT = ['litres autotest']
 
 ----
 
-### Интеграция с Allure TestOps
+### <img width="3%" title="Allure Test Ops" src="attachments/icons/AllureTestOps.png"> Интеграция с Allure TestOps
 > <a target="_blank" href="https://allure.autotests.cloud/project/4692/dashboards">Ссылка на проект</a>
 
 #### <a target="_blank" href="https://allure.autotests.cloud/project/4692/dashboards">Дашборд с общими показателями тестовых прогонов</a>
@@ -134,15 +135,22 @@ COMMENT = ['litres autotest']
 
 ----
 
-### Интеграция с Jira
+### <img width="3%" title="Jira" src="attachments/icons/jira.png"> Интеграция с Jira
 > <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1429">Ссылка на проект</a>
 
 ![jira_project](attachments/pictures/jira_project.png)
 
 ----
 
-### Оповещения в Telegram
+### <img width="3%" title="Telegram" src="attachments/icons/tg.png"> Оповещения в Telegram
 ![telegram_allert](attachments/pictures/telegram_allert.png)
 
 
+----
+### <img width="3%" title="UI" src="attachments/icons/monitor.png"> Пример видео прохождения ui-автотеста
+![autotest_gif](media/images/ui_test.gif)
 
+----
+
+### <img width="3%" title="Mobile" src="attachments/icons/mobile.png"> Пример видео прохождения mobile-автотеста
+![autotest_gif](media/images/mobile_test.mp4)
