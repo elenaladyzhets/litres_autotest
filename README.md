@@ -148,7 +148,7 @@ COMMENT = ['litres autotest']
 
 ----
 ### <img width="3%" title="UI" src="attachments/icons/monitor.png"> Пример видео прохождения ui-автотеста
-![autotest_gif](attachments/video/ui_test.gif)
+![autotest_gif](attachments/video/ui_test.mp4)
 
 ----
 
