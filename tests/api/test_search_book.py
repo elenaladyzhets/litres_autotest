@@ -1,6 +1,5 @@
 import allure
 import jsonschema
-
 from model.schemas.load_schema import load_schema
 from utils.api_requests import api_get
 
