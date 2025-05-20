@@ -5,24 +5,25 @@ import allure
 
 class WishlistPage:
    def open_wishlist(self):
-       browser.open("my-books/liked/")
-       return self
+       with allure.step('Open wishlist page'):
+          browser.open(f"https://www.litres.ru/my-books/liked/")
+          return self
 
-   def removing_book_from_favorites(self):
-       with allure.step('Удаление книги из избранного из Отложенные'):
+   def remove_book_from_wishlist(self):
+       with allure.step('Remove book from wishlist from Wishlist page'):
            browser.element('[data-testid="overlay__trigger"]').should(be.present).should(be.visible).click()
            browser.element('[data-testid="contextMenu__favorites--button"]').should(be.present).should(be.visible).click()
            return self
 
-   def book_must_be_added_to_favorites(self, book):
-       with allure.step('Проверка книги в избранном'):
+   def book_should_be_in_wishlist(self, book):
+       with allure.step('Check book in wishlist'):
            browser.element('[data-testid="art__title"]').should(be.visible)
            browser.element('[data-testid="art__title"]').should(have.text(book.name))
            browser.element('[data-testid="art__authorName"]').should(have.text(book.author))
            return self
 
-   def book_must_be_removed_from_favorites(self):
-       with allure.step('Проверка, что из избранного книга удалилась'):
+   def book_should_not_be_in_wishlist(self):
+       with allure.step('Check empty wishlist'):
            browser.element('.EmptyState_empty__content__bCfgR').should(have.text('Здесь будет все, что вы отложите на потом'))
            return self
 

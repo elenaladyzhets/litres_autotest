@@ -4,12 +4,12 @@ from model.pages.ui.cart_page import cart_page
 from model.pages.ui.book_page import book_page
 
 
-@allure.epic('UI. Removing a book to the trash')
+@allure.epic('UI. Remove a book to the trash')
 @allure.label('owner', 'Elena Ladyzhets')
-@allure.feature('Check if a book has been removed from the trash')
+@allure.feature('Remove book from cart')
 @allure.tag('ui')
 @allure.severity('normal')
-def test_add_book_to_basket():
+def test_remove_book_from_cart():
     book = Book(
         name='Кладбище домашних животных',
         author='Стивен Кинг',
@@ -17,7 +17,7 @@ def test_add_book_to_basket():
         price='499 ₽'
     )
     book_page.open(book)
-    book_page.adding_book_to_cart()
+    book_page.add_book_to_cart()
     book_page.close_message_window()
     cart_page.open_cart()
     cart_page.remove_book_from_cart()

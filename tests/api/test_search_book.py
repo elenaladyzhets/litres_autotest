@@ -5,9 +5,9 @@ from model.schemas.load_schema import load_schema
 from utils.api_requests import api_get
 
 
-@allure.epic('API. Search')
+@allure.epic('API. Search a book')
 @allure.label("owner", "Elena Ladyzhets")
-@allure.feature("Check the book search on the main page")
+@allure.feature("Search valid book")
 @allure.tag('api')
 @allure.severity('normal')
 def test_successful_searching_of_book_by_title():
@@ -25,9 +25,9 @@ def test_successful_searching_of_book_by_title():
     assert result.json()['payload']['data'][0]['type'] == "text_book"
 
 
-@allure.epic('API. Search')
+@allure.epic('API. Search a book')
 @allure.label("owner", "Elena Ladyzhets")
-@allure.feature("Check search for non-existent book on home page")
+@allure.feature("Search unvalid book")
 @allure.tag('api')
 @allure.severity('normal')
 def test_unsuccessful_searching_of_book_by_title():

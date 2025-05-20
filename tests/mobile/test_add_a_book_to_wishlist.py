@@ -11,15 +11,15 @@ from model.pages.mobile.book_page import book_page
 @allure.severity('normal')
 
 def test_add_book_to_wishlist(android_management):
-     main_page.selecting_application_language()
+     main_page.select_application_language()
      main_page.notification()
 
-     search_page.searching_book()
-     search_page.book_must_be_found()
-     search_page.choosing_book()
+     search_page.search_book()
+     search_page.book_should_be_found()
+     search_page.choose_book()
 
      book_page.add_book_to_wishlist()
-     book_page.go_to_wishlist_tab()
-     book_page.book_must_be_added_to_wishlist()
+     book_page.open_wishlist()
+     book_page.book_should_be_in_wishlist()
 
 

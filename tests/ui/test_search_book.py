@@ -23,7 +23,7 @@ def test_search_valid_book_button():
 
 @allure.epic('UI. Search a book')
 @allure.label('owner', 'Elena Ladyzhets')
-@allure.feature('Checking the book search on the main page via "Enter"')
+@allure.feature('Check the book search on the main page via "Enter"')
 @allure.tag('ui')
 @allure.severity('normal')
 

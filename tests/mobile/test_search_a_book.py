@@ -10,11 +10,11 @@ from model.pages.mobile.search_page import search_page
 @allure.severity('normal')
 
 def test_search_valid_book(android_management):
-     main_page.selecting_application_language()
+     main_page.select_application_language()
      main_page.notification()
 
-     search_page.searching_book()
-     search_page.book_must_be_found()
+     search_page.search_book()
+     search_page.book_should_be_found()
 
 
 @allure.epic('MOBILE. Search a book')
@@ -24,10 +24,10 @@ def test_search_valid_book(android_management):
 @allure.severity('normal')
 
 def test_search_non_valid_book( android_management):
-     main_page.selecting_application_language()
+     main_page.select_application_language()
      main_page.notification()
 
-     search_page.searching_non_valid_book()
-     search_page.book_must_not_be_found()
+     search_page.search_non_valid_book()
+     search_page.book_should_not_be_found()
 
 

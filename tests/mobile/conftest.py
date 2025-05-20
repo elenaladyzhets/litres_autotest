@@ -78,7 +78,7 @@ def android_management():
             add_mobile_screenshot(browser)
             add_mobile_xml(browser)
 
-            with allure.step('Завершение сессии'):
+            with allure.step('End session'):
                 browser.quit()
 
             if config.context == 'bstack':

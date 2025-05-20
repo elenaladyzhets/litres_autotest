@@ -3,6 +3,7 @@ from data.book import Book
 from model.pages.ui.wishlist_page import wishlist_page
 from model.pages.ui.book_page import book_page
 from model.pages.ui.cart_page import cart_page
+import time
 
 
 @allure.epic('UI. Remove from wishlist')
@@ -20,10 +21,10 @@ def test_remove_book_to_wishlist_from_wishlist_page():
     )
 
     book_page.open(book)
-    book_page.adding_book_to_favorites()
+    book_page.add_book_to_wishlist()
     wishlist_page.open_wishlist()
-    wishlist_page.removing_book_from_favorites()
-    wishlist_page.book_must_be_removed_from_favorites()
+    wishlist_page.remove_book_from_wishlist()
+    wishlist_page.book_should_not_be_in_wishlist()
 
 
 @allure.epic('UI. Remove from wishlist')
@@ -41,10 +42,10 @@ def test_remove_book_to_wishlist_from_cart_page():
     )
 
     book_page.open(book)
-    book_page.adding_book_to_cart()
+    book_page.add_book_to_cart()
     book_page.close_message_window()
     cart_page.open_cart()
-    cart_page.adding_book_to_favorites_from_cart()
-    cart_page.removing_book_from_favorites_from_cart()
+    cart_page.add_book_to_wishlist_from_cart()
+    cart_page.remove_book_from_wishlist_from_cart()
     wishlist_page.open_wishlist()
-    wishlist_page.book_must_be_removed_from_favorites()
+    wishlist_page.book_should_not_be_in_wishlist()

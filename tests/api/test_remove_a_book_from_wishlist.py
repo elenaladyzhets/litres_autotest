@@ -2,7 +2,7 @@ import allure
 from utils.api_requests import api_delete
 
 
-@allure.tag('API. Remove book')
+@allure.tag('API. Remove book from wishlist')
 @allure.label('owner', 'Elena Ladyzhets')
 @allure.feature('Remove book from the wishlist')
 @allure.tag('api')

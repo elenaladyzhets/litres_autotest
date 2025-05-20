@@ -15,34 +15,59 @@
 * Автоматизация отчетности о тестовых прогонах и тест-кейсах в Jira
 * Запуск web/UI автотестов в Selenoid
 
-### Список проверок, реализованных в web/UI автотестах
+<h3> Список проверок, реализованных в автотестах:</h3>
 
-- [x] Поиск книги (через кнопку/нажатие Enter, а также поиск валидного/невалидного наименования книги)
-- [x] Добавление книги в корзину
-- [x] Удаление книги из корзины
-- [x] Добавление книги в избранное (через страницу книги/корзину)
-- [x] Удаление книги из избранного (через корзину/страницу Отложенного)
+### UI-тесты
+
+* ✅ Поиск книги (через кнопку/нажатие Enter, а также поиск валидного/невалидного наименования книги)
+* ✅ Добавление книги в корзину
+* ✅ Удаление книги из корзины
+* ✅ Добавление книги в избранное (через страницу книги/корзину)
+* ✅ Удаление книги из избранного (через корзину/страницу Отложенного)
+
+### API-тесты
+
+* ✅ Добавление книги в корзину
+* ✅ Добавление книги в избранное
+* ✅ Удаление книги из избранного
+* ✅ Поиск книги (поиск валидного/невалидного наименования книги)
+
+### Mobile-тесты
+
+* ✅ Поиск книги (поиск валидного/невалидного наименования книги)
+* ✅ Добавление книги в избранное
+* ✅ Удаление книги из избранного
+
+----
 
 ### Используемый стэк
 
-<img title="Python" src="attachments/icons/python-original.svg" height="40" width="40"/> <img title="Jira" src="attachments/icons/jira.png" height="40" width="40"/> <img title="Allure Report" src="attachments/icons/Allure_Report.png" height="40" width="40"/> <img title="Allure TestOps" src="attachments/icons/AllureTestOps.png" height="40" width="40"/> <img title="GitHub" src="attachments/icons/github-original.svg" height="40" width="40"/> <img title="Selenoid" src="attachments/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="attachments/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="attachments/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="attachments/icons/tg.png" height="40" width="40"/> <img title="Jenkins" src="attachments/icons/jenkins-original.svg" height="40" width="40"/> 
+<img title="Python" src="attachments/icons/python-original.svg" height="40" width="40"/> <img title="Jira" src="attachments/icons/jira.png" height="40" width="40"/> <img title="Allure Report" src="attachments/icons/Allure_Report.png" height="40" width="40"/> <img title="Allure TestOps" src="attachments/icons/AllureTestOps.png" height="40" width="40"/> <img title="GitHub" src="attachments/icons/github-original.svg" height="40" width="40"/> <img title="Selenoid" src="attachments/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="attachments/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="attachments/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="attachments/icons/tg.png" height="40" width="40"/> <img title="Jenkins" src="attachments/icons/jenkins-original.svg" height="40" width="40"/> <img title="Android Studio" src="attachments/icons/android_studio.png" height="40" width="40"/> <img title="Appium" src="attachments/icons/appium.png" height="40" width="40"/> <img title="Browserstack" src="attachments/icons/browserstack.png" height="40" width="40"/> 
 
 ----
 
 ### Локальный запуск
-> Перед запуском в корне проекта создать файл .env с содержимым:
+> Перед запуском в корне проекта создать файлы .env и env.credentials с содержимым:
 ```
 SELENOID_LOGIN='user1'
 SELENOID_PASS='1234'
 SELENOID_URL='selenoid.autotests.cloud'
 ```
-> Для запуска web/UI автотестов выполнить:
+> и 
+```
+bstack_userName={your browserstack username}
+bstack_accessKey={your browserstack password}
+```
+> соответственно
+
+> Для локального запуска с дефолтными значениями необходимо выполнить команду:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-pytest -s . --browser_version=${BROWSER_VERSION}
+pip install poetry
+poetry install --no-root
+pytest tests
 ```
 
 #### Получение отчёта:
@@ -52,8 +77,8 @@ allure serve build/allure-results
 
 ----
 
-### Проект в Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/litres_autotest/">Ссылка</a>
+### <img width="3%" title="Jenkins" src="attachments/icons/jenkins-original"> Запуск проекта в Jenkins
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/litres_autotest/">Ссылка на проект в Jenkins</a>
 
 #### Параметры сборки
 > [!NOTE]

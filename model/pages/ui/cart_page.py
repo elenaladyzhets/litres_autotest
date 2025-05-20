@@ -5,35 +5,35 @@ import allure
 class CartPage:
 
     def open_cart(self):
-        with allure.step('Открытие корзины'):
+        with allure.step('Open cart'):
             browser.element('[data-testid=tab-basket]').click()
             return self
 
     def book_should_be_in_cart(self, book):
-        with allure.step('Проверка книги в корзине'):
+        with allure.step('Check book in cart'):
             browser.element('[data-testid=cart__bookCardTitle--wrapper]').should(have.text(book.name))
             browser.element('[data-testid=cart__bookCardAuthor--wrapper]').should(have.text(book.author))
             browser.element('[data-testid=cart__bookCardDiscount--wrapper]').should(have.text(str(book.price)))
             return self
 
-    def adding_book_to_favorites_from_cart(self):
-        with allure.step('Добавление книги в избранное из корзины'):
+    def add_book_to_wishlist_from_cart(self):
+        with allure.step('Add book to wishlist from cart'):
            browser.all('.FunctionalButton_funcButtonContent__ns82k').element_by(be.visible).click()
            return self
 
-    def removing_book_from_favorites_from_cart(self):
-        with allure.step('Удаление книги из избранного из корзины'):
+    def remove_book_from_wishlist_from_cart(self):
+        with allure.step('Remove book from wishlist from cart'):
            browser.all('.FunctionalButton_funcButtonContent__ns82k').element_by(be.visible).click()
            return self
 
     def remove_book_from_cart(self):
-        with allure.step('Удаление книги из корзины'):
+        with allure.step('Remove book from cart'):
             browser.all('[data-testid=cart__listDeleteButton]').first.click()
             browser.all('[data-testid=button__content]').element_by(have.text('Удалить')).click()
             return self
 
     def cart_should_be_empty(self):
-        with allure.step('Проверка, что корзина пустая'):
+        with allure.step('Check empty cart'):
             browser.element('[data-testid=cart__emptyState--wrapper]').should(have.text('Корзина пуста'))
             return self
 

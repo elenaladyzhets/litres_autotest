@@ -17,7 +17,7 @@ def test_add_book_to_cart():
         price='499 ₽'
     )
     book_page.open(book)
-    book_page.adding_book_to_cart()
+    book_page.add_book_to_cart()
     book_page.close_message_window()
     cart_page.open_cart()
     cart_page.book_should_be_in_cart(book)

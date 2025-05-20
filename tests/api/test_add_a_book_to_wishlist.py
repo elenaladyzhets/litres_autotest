@@ -2,7 +2,7 @@ import allure
 from utils.api_requests import api_put_to_wishlist
 
 
-@allure.tag("API. Add book")
+@allure.tag("API. Add book to wishlist")
 @allure.label("owner", "Elena Ladyzhets")
 @allure.feature("Add book to wishlist")
 @allure.tag('api')

@@ -5,8 +5,8 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 class AndroidMainPage:
     @staticmethod
-    def selecting_application_language():
-        with allure.step('Selecting application language'):
+    def select_application_language():
+        with allure.step('Select application language'):
            browser.element((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("ENGLISH")')).click()
            browser.element((AppiumBy.ID, "ru.litres.android:id/choosebutton")).click()
 

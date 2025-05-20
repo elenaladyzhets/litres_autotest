@@ -4,33 +4,33 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 
 class SearchPage:
-    def searching_book(self):
-        with allure.step('Type search'):
+    def search_book(self):
+        with allure.step('Search valid book'):
             browser.element((AppiumBy.ID, 'ru.litres.android:id/search')).should(be.visible).click()
             browser.element((AppiumBy.ID, 'ru.litres.android:id/et_search_query')).type('The Green Mile')
             browser.element((AppiumBy.ID, 'ru.litres.android:id/textViewItemSearchSuggestText')).click()
         return self
 
-    def book_must_be_found(self):
-        with allure.step('Verify content found'):
+    def book_should_be_found(self):
+        with allure.step('Check book is found'):
             browser.element((AppiumBy.XPATH,'(//android.widget.TextView[@resource-id="ru.litres.android:id/textViewBookName"])[1]')).should(have.text('Зеленая миля / The Green Mile'))
         return self
 
-    def searching_non_valid_book(self):
-        with allure.step('Type search'):
+    def search_non_valid_book(self):
+        with allure.step('Search unvalid book'):
             browser.element((AppiumBy.ID, "ru.litres.android:id/search")).click()
             browser.element((AppiumBy.ID, "ru.litres.android:id/et_search_query")).type('4353tgr8y7557g')
             browser.element((AppiumBy.ID, 'ru.litres.android:id/textViewItemSearchSuggestText')).click()
         return self
 
-    def book_must_not_be_found(self):
-        with allure.step('Verify content not found'):
+    def book_should_not_be_found(self):
+        with allure.step('Check book is not found'):
             browser.element((AppiumBy.ID, "ru.litres.android:id/title")).should(have.text('Nothing found'))
             (browser.element((AppiumBy.ID, "ru.litres.android:id/tv_books_search_empty_message")).should(have.text('Make sure you entered the search query correctly')))
         return self
 
-    def choosing_book(self):
-        with allure.step('Choosing a book'):
+    def choose_book(self):
+        with allure.step('Choose a book'):
             browser.element((AppiumBy.ID, "ru.litres.android:id/textViewBookName")).click()
         return self
 

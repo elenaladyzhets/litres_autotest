@@ -7,7 +7,7 @@ from utils.api_requests import api_put
 
 @allure.epic('API. Add book to cart')
 @allure.label("owner", "Elena Ladyzhets")
-@allure.feature("Check if a book has been added to the cart")
+@allure.feature("Add book to cart")
 @allure.tag('api')
 @allure.severity('normal')
 

@@ -1,6 +1,6 @@
 from typing import Literal, cast
 from utils import tools
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 import os
 from dotenv import load_dotenv
 
@@ -18,23 +18,21 @@ class Config(BaseSettings):
     remote_url: str = ''
     timeout: float = 10.0
 
-    class Config:
-        env_file_encoding = 'utf-8'
+    model_config = SettingsConfigDict(env_file_encoding='utf-8')
 
 
 def load_config():
-    # First load credentials
     credentials_path = tools.path_to_env('.env.credentials')
     load_dotenv(dotenv_path=credentials_path)
 
     raw_context = os.getenv('context', 'bstack')
     context: Context = cast(Context, raw_context)
 
-    # Then load context-specific config
+
     env_path = tools.path_to_env(f'.env.{context}')
     load_dotenv(dotenv_path=env_path)
 
-    # Create config with explicit environment variables
+
     env_vars = {
         'context': context,
         'app': os.getenv('app'),

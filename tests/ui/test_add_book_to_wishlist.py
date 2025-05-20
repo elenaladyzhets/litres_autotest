@@ -3,6 +3,7 @@ from data.book import Book
 from model.pages.ui.wishlist_page import wishlist_page
 from model.pages.ui.book_page import book_page
 from model.pages.ui.cart_page import cart_page
+import time
 
 
 @allure.epic('UI. Add to wishlist')
@@ -20,9 +21,9 @@ def test_add_book_to_wishlist_from_book_page():
     )
 
     book_page.open(book)
-    book_page.adding_book_to_favorites()
+    book_page.add_book_to_wishlist()
     wishlist_page.open_wishlist()
-    wishlist_page.book_must_be_added_to_favorites(book)
+    wishlist_page.book_should_be_in_wishlist(book)
 
 @allure.epic('UI. Add to wishlist')
 @allure.label('owner', 'Elena Ladyzhets')
@@ -39,9 +40,12 @@ def test_add_book_to_wishlist_from_cart():
     )
 
     book_page.open(book)
-    book_page.adding_book_to_cart()
+    book_page.add_book_to_cart()
     book_page.close_message_window()
     cart_page.open_cart()
-    cart_page.adding_book_to_favorites_from_cart()
+
+    time.sleep(2)
+
+    cart_page.add_book_to_wishlist_from_cart()
     wishlist_page.open_wishlist()
-    wishlist_page.book_must_be_added_to_favorites(book)
+    wishlist_page.book_should_be_in_wishlist(book)
