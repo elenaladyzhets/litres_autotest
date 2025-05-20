@@ -77,7 +77,7 @@ allure serve build/allure-results
 
 ----
 
-### <img width="3%" title="Jenkins" src="attachments/icons/jenkins-original"> Запуск проекта в Jenkins
+### <img width="3%" title="Jenkins" src="attachments/icons/jenkins-original.svg"> Запуск проекта в Jenkins
 > <a target="_blank" href="https://jenkins.autotests.cloud/job/litres_autotest/">Ссылка на проект в Jenkins</a>
 
 #### Параметры сборки
