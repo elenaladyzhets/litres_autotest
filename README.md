@@ -49,9 +49,9 @@
 ### Локальный запуск
 > Перед запуском в корне проекта создать файлы .env и env.credentials с содержимым:
 ```
-SELENOID_LOGIN='user1'
-SELENOID_PASS='1234'
-SELENOID_URL='selenoid.autotests.cloud'
+SELENOID_LOGIN={your selenoid username}
+SELENOID_PASS={your selenoid password}
+SELENOID_URL={your selenoid url}
 ```
 > и 
 ```
