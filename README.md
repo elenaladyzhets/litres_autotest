@@ -1,4 +1,4 @@
-# Фреймворк для автоматизации тестирования сайта "ЛитРес"
+# Проект по автоматизации тестирования сайта "ЛитРес"
 > <a target="_blank" href="https://www.litres.ru/">litres.ru</a>
 
 ![main page screenshot](/attachments/icons/litres.png)
