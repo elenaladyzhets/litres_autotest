@@ -1,6 +1,6 @@
 import allure
-from data.book import Book
-from model.pages.ui.search_page import search_page
+from helpers.data import Book
+from helpers.model.pages.ui import search_page
 
 
 @allure.epic('UI. Search a book')

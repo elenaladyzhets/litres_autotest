@@ -36,7 +36,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -544,7 +544,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -1052,7 +1052,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -1592,7 +1592,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -2132,7 +2132,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -2671,7 +2671,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -3229,7 +3229,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -3725,7 +3725,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -4252,7 +4252,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -4779,7 +4779,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "type": "string"
+                      "type": ["string", "null"]
                     },
                     "cover_ratio": {
                       "type": "number"
@@ -5456,7 +5456,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5474,7 +5474,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "null"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5487,10 +5487,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5512,7 +5512,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5530,7 +5530,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "null"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5543,10 +5543,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5568,7 +5568,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5586,7 +5586,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "string"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5609,7 +5609,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "string"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5632,7 +5632,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "string"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5645,10 +5645,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "null"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5670,7 +5670,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5688,7 +5688,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "string"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5711,7 +5711,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "string"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5724,10 +5724,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "null"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5749,7 +5749,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5767,7 +5767,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "null"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5783,7 +5783,7 @@
                   "type": "string"
                 },
                 "help_text": {
-                  "type": "null"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5805,7 +5805,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5823,7 +5823,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "null"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5836,10 +5836,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 }
               },
               "required": [
@@ -5861,7 +5861,7 @@
                   "type": "string"
                 },
                 "title": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 },
                 "data": {
                   "type": "array",
@@ -5879,7 +5879,7 @@
                           "type": "boolean"
                         },
                         "title": {
-                          "type": "null"
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -5892,10 +5892,10 @@
                   ]
                 },
                 "subtitle": {
-                  "type": "null"
+                  "type": ["null", "string"]
                 },
                 "help_text": {
-                  "type": "string"
+                  "type": ["string", "null"]
                 }
               },
               "required": [

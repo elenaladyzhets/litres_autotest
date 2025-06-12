@@ -1,12 +1,14 @@
 from selene import browser, be, have
 import allure
 
+from config import config
 
+PATCH_URL='/my-books/liked/'
 
 class WishlistPage:
    def open_wishlist(self):
        with allure.step('Open wishlist page'):
-          browser.open(f"https://www.litres.ru/my-books/liked/")
+          browser.open(f"{config.base_ui_url}{PATCH_URL}")
           return self
 
    def remove_book_from_wishlist(self):

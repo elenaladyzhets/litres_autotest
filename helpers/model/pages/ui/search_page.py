@@ -1,12 +1,13 @@
 from selene import browser, have
 import allure
 
+from config import config
 
 
 class SearchPage:
     def open(self):
         with allure.step('Open main page'):
-            browser.open('https://www.litres.ru/')
+            browser.open(config.base_ui_url)
             return self
 
     def search_book_by_title(self, book):

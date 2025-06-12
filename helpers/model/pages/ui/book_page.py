@@ -1,11 +1,13 @@
 from selene import browser, be, have, command
 import allure
 
+from config import config
+
 
 class BookPage:
     def open(self, book):
         with allure.step('Open book page'):
-           browser.open(f"https://www.litres.ru/{book.url}")
+           browser.open(f"{config.base_ui_url}/{book.url}")
            return self
 
     def add_book_to_cart(self):

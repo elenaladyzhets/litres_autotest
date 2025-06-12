@@ -1,7 +1,7 @@
 # Фреймворк для автоматизации тестирования сайта "ЛитРес"
 > <a target="_blank" href="https://www.litres.ru/">litres.ru</a>
 
-![main page screenshot](/attachments/icons/litres.png)
+![main page screenshot](/resources/attachments/icons/litres.png)
 
 ----
 
@@ -42,7 +42,7 @@
 
 ### Используемый стэк
 
-<img title="Python" src="attachments/icons/python-original.svg" height="40" width="40"/> <img title="Jira" src="attachments/icons/jira.png" height="40" width="40"/> <img title="Allure Report" src="attachments/icons/Allure_Report.png" height="40" width="40"/> <img title="Allure TestOps" src="attachments/icons/AllureTestOps.png" height="40" width="40"/> <img title="GitHub" src="attachments/icons/github-original.svg" height="40" width="40"/> <img title="Selenoid" src="attachments/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="attachments/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="attachments/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="attachments/icons/tg.png" height="40" width="40"/> <img title="Jenkins" src="attachments/icons/jenkins-original.svg" height="40" width="40"/> <img title="Android Studio" src="attachments/icons/android_studio.png" height="40" width="40"/> <img title="Appium" src="attachments/icons/appium.png" height="40" width="40"/> <img title="Browserstack" src="attachments/icons/browserstack.png" height="40" width="40"/> 
+<img title="Python" src="resources/attachments/icons/python-original.svg" height="40" width="40"/> <img title="Jira" src="resources/attachments/icons/jira.png" height="40" width="40"/> <img title="Allure Report" src="resources/attachments/icons/Allure_Report.png" height="40" width="40"/> <img title="Allure TestOps" src="resources/attachments/icons/AllureTestOps.png" height="40" width="40"/> <img title="GitHub" src="resources/attachments/icons/github-original.svg" height="40" width="40"/> <img title="Selenoid" src="resources/attachments/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="resources/attachments/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="resources/attachments/icons/pycharm.png" height="40" width="40"/> <img title="Telegram" src="resources/attachments/icons/tg.png" height="40" width="40"/> <img title="Jenkins" src="resources/attachments/icons/jenkins-original.svg" height="40" width="40"/> <img title="Android Studio" src="resources/attachments/icons/android_studio.png" height="40" width="40"/> <img title="Appium" src="resources/attachments/icons/appium.png" height="40" width="40"/> <img title="Browserstack" src="resources/attachments/icons/browserstack.png" height="40" width="40"/> 
 
 ----
 
@@ -90,30 +90,30 @@ COMMENT = ['litres autotest']
 #### Запуск автотестов в Jenkins
 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/litres_autotest/">проект</a>
 
-![jenkins project main page](attachments/pictures/jenkins_project_main_page.png)
+![jenkins project main page](resources/attachments/pictures/jenkins_project_main_page.png)
 
 2. Нажать "Build with Parameters"
 3. Из списка "TYPE_TEST" выбрать тип, который необходимо протестировать
 4. Из списка "BROWSER" выбрать версию браузера
 4. Нажать "Build"
 
-![jenkins_build](attachments/pictures/jenkins_build.png)
+![jenkins_build](resources/attachments/pictures/jenkins_build.png)
 
 ----
 
 ### <img width="3%" title="Allure" src="attachments/icons/Allure_Report.png"> Allure отчет
 #### <a target="_blank" href="https://jenkins.autotests.cloud/job/Ivi-mobile-and-UI-Auto-Tests/15/allure/">Общие результаты</a>
-![allure_report_overview](attachments/pictures/allure_report_overview.png)
+![allure_report_overview](resources/attachments/pictures/allure_report_overview.png)
 
 #### <a target="_blank" href="https://jenkins.autotests.cloud/job/Ivi-mobile-and-UI-Auto-Tests/15/allure/#suites">Результаты прохождения теста</a>
 
-![allure_reports_behaviors](attachments/pictures/allure_reports_suites.png)
+![allure_reports_behaviors](resources/attachments/pictures/allure_reports_suites.png)
 
 #### <a target="_blank" href="https://jenkins.autotests.cloud/job/Ivi-mobile-and-UI-Auto-Tests/15/allure/#graph">Графики</a>
 
 
-![allure_reports_graphs](attachments/pictures/alluere_reports_graphs_1.png)
-![allure_reports_graphs](attachments/pictures/alluere_reports_graphs_2.png)
+![allure_reports_graphs](resources/attachments/pictures/alluere_reports_graphs_1.png)
+![allure_reports_graphs](resources/attachments/pictures/alluere_reports_graphs_2.png)
 
 ----
 
@@ -122,34 +122,34 @@ COMMENT = ['litres autotest']
 
 #### <a target="_blank" href="https://allure.autotests.cloud/project/4692/dashboards">Дашборд с общими показателями тестовых прогонов</a>
 
-![allure_test_ops_dashboards](attachments/pictures/allure_testops_dashboards.png)
+![allure_test_ops_dashboards](resources/attachments/pictures/allure_testops_dashboards.png)
 
 #### <a target="_blank" href="https://allure.autotests.cloud/project/3910/launches">История запуска тестовых наборов</a>
 
-![allure_testops_launches](attachments/pictures/allure_testops_launches.png)
+![allure_testops_launches](resources/attachments/pictures/allure_testops_launches.png)
 
 #### <a target="_blank" href="https://allure.autotests.cloud/project/3910/test-cases/28510?treeId=0">Тест кейсы</a>
 
-![allure_testops_suites](attachments/pictures/allure_testops_suites.png)
+![allure_testops_suites](resources/attachments/pictures/allure_testops_suites.png)
 
 ----
 
 ### <img width="3%" title="Jira" src="attachments/icons/jira.png"> Интеграция с Jira
 > <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1429">Ссылка на проект</a>
 
-![jira_project](attachments/pictures/jira_project.png)
+![jira_project](resources/attachments/pictures/jira_project.png)
 
 ----
 
 ### <img width="3%" title="Telegram" src="attachments/icons/tg.png"> Оповещения в Telegram
-![telegram_allert](attachments/pictures/telegram_allert.png)
+![telegram_allert](resources/attachments/pictures/telegram_allert.png)
 
 
 ----
 ### <img width="3%" title="UI" src="attachments/icons/monitor.png"> Пример видео прохождения ui-автотеста
-![autotest_gif](attachments/video/ui_test.gif)
+![autotest_gif](resources/attachments/video/ui_test.gif)
 
 ----
 
 ### <img width="3%" title="Mobile" src="attachments/icons/mobile.png"> Пример видео прохождения mobile-автотеста
-![autotest_gif](attachments/video/mobile_test.gif)
+![autotest_gif](resources/attachments/video/mobile_test.gif)

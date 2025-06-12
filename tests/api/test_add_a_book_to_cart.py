@@ -1,8 +1,8 @@
 import allure
 import jsonschema
 
-from model.schemas.load_schema import load_schema
-from utils.api_requests import api_put
+from helpers.model.schemas.load_schema import load_schema
+from helpers.utils.api_requests import api_put
 
 
 @allure.epic('API. Add book to cart')

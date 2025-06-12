@@ -2,34 +2,42 @@ import requests
 import allure
 import logging
 from allure_commons.types import AttachmentType
-from utils.logging_helper import logging_helper
+from helpers.utils.logging_helper import logging_helper
+from config import config
 
-base_url = "https://api.litres.ru/foundation/api"
+API_PATH = '/foundation/api'
 
-def api_get(url, **kwargs):
-    with allure.step("API Request"):
-        result = requests.get(base_url + url, **kwargs)
+def _build_url(endpoint: str) -> str:
+    return f"{config.base_api_url}{API_PATH}{endpoint}"
+
+def api_get(endpoint, **kwargs):
+    with allure.step("API GET Request"):
+        url = _build_url(endpoint)
+        result = requests.get(url, **kwargs)
         logging_helper(result)
         return result
 
 
-def api_post(url, **kwargs):
-    with allure.step("API Request"):
-        result = requests.post(base_url + url, **kwargs)
+def api_post(endpoint, **kwargs):
+    with allure.step("API POST Request"):
+        url = _build_url(endpoint)
+        result = requests.post(url, **kwargs)
         logging_helper(result)
         return result
 
 
-def api_put(url, **kwargs):
-    with allure.step("API Request"):
-        result = requests.put(base_url + url, **kwargs)
+def api_put(endpoint, **kwargs):
+    with allure.step("API PUT Request"):
+        url = _build_url(endpoint)
+        result = requests.put(url, **kwargs)
         logging_helper(result)
         return result
 
 
 def api_put_to_wishlist(endpoint, **kwargs):
-    with allure.step('API Request'):
-        result = requests.put(url='https://api.litres.ru/foundation/api/' + endpoint, **kwargs)
+    with allure.step('API PUT Request'):
+        url = _build_url(endpoint)
+        result = requests.put(url, **kwargs)
         allure.attach(body=result.request.method + ' ' + result.url, name='Request',
                       attachment_type=AttachmentType.TEXT, extension='.txt')
         allure.attach(body=str(result.status_code), name='Status Code',
@@ -40,8 +48,9 @@ def api_put_to_wishlist(endpoint, **kwargs):
 
 
 def api_delete(endpoint, **kwargs):
-    with allure.step('API Request'):
-        result = requests.delete(url='https://api.litres.ru/foundation/api/' + endpoint, **kwargs)
+    with allure.step('API DELETE Request'):
+        url = _build_url(endpoint)
+        result = requests.delete(url, **kwargs)
         allure.attach(body=result.request.method + ' ' + result.url, name='Request',
                       attachment_type=AttachmentType.TEXT, extension='.txt')
         allure.attach(body=str(result.status_code), name='Status Code',

@@ -1,5 +1,5 @@
 import allure
-from utils.api_requests import api_put_to_wishlist
+from helpers.utils.api_requests import api_put_to_wishlist
 
 
 @allure.tag("API. Add book to wishlist")

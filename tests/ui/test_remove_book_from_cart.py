@@ -1,7 +1,7 @@
 import allure
-from data.book import Book
-from model.pages.ui.cart_page import cart_page
-from model.pages.ui.book_page import book_page
+from helpers.data import Book
+from helpers.model.pages.ui import cart_page
+from helpers.model.pages.ui.book_page import book_page
 
 
 @allure.epic('UI. Remove a book to the trash')

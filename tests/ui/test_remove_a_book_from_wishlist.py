@@ -1,9 +1,8 @@
 import allure
-from data.book import Book
-from model.pages.ui.wishlist_page import wishlist_page
-from model.pages.ui.book_page import book_page
-from model.pages.ui.cart_page import cart_page
-import time
+from helpers.data import Book
+from helpers.model.pages.ui import wishlist_page
+from helpers.model.pages.ui.book_page import book_page
+from helpers.model.pages.ui import cart_page
 
 
 @allure.epic('UI. Remove from wishlist')

@@ -4,10 +4,10 @@ import allure_commons
 from appium.options.android import UiAutomator2Options
 from selene import browser, support
 from config import config
-from utils import  tools
+from helpers.utils import  tools
 from appium import webdriver
 
-from utils.attach import add_mobile_screenshot, add_mobile_xml, add_mobile_bstack_video
+from helpers.utils.attach import add_mobile_screenshot, add_mobile_xml, add_mobile_bstack_video
 
 
 @pytest.fixture(scope='function')

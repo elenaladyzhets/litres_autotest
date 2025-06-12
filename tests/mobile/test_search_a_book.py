@@ -1,6 +1,6 @@
 import allure
-from model.pages.mobile.main_page import main_page
-from model.pages.mobile.search_page import search_page
+from helpers.model.pages.mobile.main_page import main_page
+from helpers.model.pages.mobile import search_page
 
 
 @allure.epic('MOBILE. Search a book')

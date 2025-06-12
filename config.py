@@ -1,5 +1,5 @@
 from typing import Literal, cast
-from utils import tools
+from helpers.utils import tools
 from pydantic_settings import BaseSettings, SettingsConfigDict
 import os
 from dotenv import load_dotenv
@@ -17,6 +17,9 @@ class Config(BaseSettings):
     udid: str = ''
     remote_url: str = ''
     timeout: float = 10.0
+
+    base_ui_url: str = 'https://www.litres.ru'
+    base_api_url: str = 'https://api.litres.ru'
 
     model_config = SettingsConfigDict(env_file_encoding='utf-8')
 
@@ -40,8 +43,8 @@ def load_config():
         'platformVersion': os.getenv('platformVersion'),
         'remote_url': os.getenv('remote_url'),
         'udid': os.getenv('udid', ''),
-        'bstack_userName': os.getenv('bstack_userName'),
-        'bstack_accessKey': os.getenv('bstack_accessKey')
+        'bstack_userName': os.getenv('bstack_userName','') ,
+        'bstack_accessKey': os.getenv('bstack_accessKey','')
     }
 
     return Config(**env_vars)

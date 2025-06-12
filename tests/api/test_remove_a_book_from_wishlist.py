@@ -1,5 +1,5 @@
 import allure
-from utils.api_requests import api_delete
+from helpers.utils.api_requests import api_delete
 
 
 @allure.tag('API. Remove book from wishlist')
